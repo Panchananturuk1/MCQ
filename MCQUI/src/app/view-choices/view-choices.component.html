@@ -1,0 +1,107 @@
+<div *ngFor="let choice of choices">
+  <div class="body">
+    <form action="" #form="ngForm">
+  <div class="rectangle-around">
+      <div class="card" >
+        <div class="card-header">
+          <p class="coice-interation" id="ModalLabel">CHOICE INTERACTION</p>
+          <span class="choice-right">
+            <p class="question">QUESTION</p>
+            <p class="response">RESPONSE</p>
+            <img src="/assets/images/trash.png" class="trash" alt="" (click)="deleteChoices(viewChoices.id)">
+            
+        </span>
+        </div>
+        <div class="card-body">
+            <div class="col-md-7">
+              <p style="color: #0C747E; font-size: 18px;">Question Body</p>
+            </div>
+            <div class="choices">
+              <div style="display: flex; align-items: flex-start;">
+                <input type="radio" name="id" id="id" [(ngModel)]="viewChoices.id">
+                <label for="id" style="padding-left: 28px;font-size: 15px; ">{{ choice.id }}
+                  <button type="button" class="btn btn-danger"
+                  (click)="deleteChoices(viewChoices.id)">Delete</button>
+                </label><br><br>
+              </div>
+              
+              <div style="display: flex; align-items: flex-start;">
+              <input type="radio" name="choice" id="choice-3" [(ngModel)]="viewChoices.choice1">
+              <label for="choice" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice1 }}</label><br><br>
+            </div>
+            <div>
+              <input type="radio" name="choice" id="choice-3" [(ngModel)]="viewChoices.choice2">
+              <label for="choice" style="padding-left: 28px; font-size: 15px;">{{ choice.choice2 }}</label><br><br>
+            </div>
+
+            <div>
+              <input type="radio" name="choice" id="choice-3" [(ngModel)]="viewChoices.choice3">
+              <label for="choice" style="padding-left: 28px; font-size: 15px;">{{ choice.choice3 }}</label><br><br>
+            </div>
+            
+            <div>
+              <input type="radio" name="choice" id="choice-3" [(ngModel)]="viewChoices.choice4">
+              <label for="choice" style="padding-left: 28px; font-size: 15px;">{{ choice.choice4 }}</label><br><br>
+            </div>
+
+          <!-- ending of card body -->
+          </div>
+          <!-- ENGIND OF CARD -->
+        </div>
+        <!-- ENGIND IF rectangle-around -->
+      </div>
+        <!-- ending OF *ngFor -->
+    </div>
+        
+  </form>
+   <!-- ENGING OF BODY   -->
+  </div>
+
+
+  
+
+
+    <div class="save-main">
+      <img src="/assets/images/save.png" class="save" alt="">
+    </div>
+    <div >
+      <span class="top-right">
+      <img src="/assets/images/eye.png" class="eye" alt="">
+      <img src="/assets/images/printer.png" class="printer" alt="">
+      <img src="/assets/images/lines.png" class="lines" alt="">
+    </span>
+    </div>
+    </div>
+
+    <!-- <button type="button" class="btn btn-danger"
+    (click)="deleteChoices(viewChoices.id)">Delete</button> -->
+    <!-- <button (click)="deleteChoices(viewChoices.id)" ></button> -->
+
+      
+  
+
+
+<!-- <table class="table" *ngIf="choices && choices.length > 0">
+    <thead>
+        <tr>
+          
+            <th>Choice 1</th>
+            <th>Choice 2</th>
+            <th>Choice 3</th>
+            <th>Choice 4</th>
+          
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let choice of choices">
+         
+            <td>{{ choice.choice1 }}</td>
+            <td>{{ choice.choice2 }}</td>
+            <td>{{ choice.choice3 }}</td>
+            <td>{{ choice.choice4 }}</td>
+           
+        </tr>
+    </tbody>
+</table> -->
+        
+    

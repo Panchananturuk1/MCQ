@@ -1,0 +1,21 @@
+<app-header></app-header>
+
+<div class="row">
+
+     <!-- <main>
+        <app-sidebar  class="black-border"></app-sidebar>
+    </main> -->
+    <!-- <main>
+        <app-sidebar  class="black-border" (ParentData)="sidebarItemClick($event)"></app-sidebar>
+    </main> -->
+    <div [ngSwitch]>
+    <!-- <div [ngSwitch]="selectedSidebar"> -->
+        
+        <!-- <div *ngSwitchDefault><app-items></app-items></div> -->
+        <div *ngSwitchCase="'Items'"><app-items></app-items></div> 
+        <div *ngSwitchCase="'Add'"><app-add-choices></app-add-choices></div> 
+      </div>
+      <!-- <app-add-choices></app-add-choices> -->
+
+</div>
+<router-outlet></router-outlet>

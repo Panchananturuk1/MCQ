@@ -1,0 +1,36 @@
+<div class="container mx-25 my-5" >
+    <h1 class="mb-3">Add New Employee</h1>
+    <div class="row ">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="addChoicess()">
+            <!-- <form #form="ngForm"> -->
+            
+              <div class="form-group">
+                <label for="choice1" class="form-label">Choice1</label>
+                <input type="text" class="form-control" id="choice1" 
+                name="choice1" [(ngModel)]="addChoicesRequest.choice1">
+              </div>
+
+                <div class="form-group">
+                  <label for="choice2" class="form-label">Choice2</label>
+                  <input type="text" class="form-control" id="choice2" 
+                  name="choice2" [(ngModel)]="addChoicesRequest.choice2">
+                </div>
+                  <div class="form-group">
+                    <label for="choice3" class="form-label">Choice3</label>
+                    <input type="text" class="form-control" id="choice3" 
+                    name="choice3" [(ngModel)]="addChoicesRequest.choice3">
+                  </div>  
+                  <div class="form-group">
+                    <label for="choice4" class="form-label">Choice4</label>
+                    <input type="text" class="form-control" id="choice4" 
+                    name="choice4" [(ngModel)]="addChoicesRequest.choice4">
+                  </div>    
+               
+                <br>    
+                <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+        </div>
+    </div>
+
+</div>
