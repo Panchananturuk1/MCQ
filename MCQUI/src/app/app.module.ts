@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { AddChoicesComponent } from './add-choices/add-choices.component'
 import { ViewChoicesComponent } from './view-choices/view-choices.component';
 import { View2Component } from './view2/view2.component';
+import { EditChoiceComponent } from './edit-choice/edit-choice.component';
 
 
 
@@ -25,7 +26,8 @@ import { View2Component } from './view2/view2.component';
     ItemsComponent,
     AddChoicesComponent,
     ViewChoicesComponent,
-    View2Component
+    View2Component,
+    EditChoiceComponent
   ],
   imports: [
     BrowserModule,

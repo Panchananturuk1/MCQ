@@ -38,6 +38,46 @@ namespace MCQ.API.Controllers
 
         }
 
+        [HttpGet]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> GetChoice([FromRoute] Guid id)
+        {
+            var choices = await _mcqDbContext.Choices.FirstOrDefaultAsync(x => x.Id == id);
+
+            if (choices == null)
+            {
+                return NotFound();
+            }
+            return Ok(choices);
+        }
+
+        [HttpPut]
+        [Route("{id:Guid}")]
+        public async Task<IActionResult> UpdateChoice([FromRoute] Guid id, Choice updateChoicesRequest)
+        // public async Task<ActionResult<List<Employee>>> UpdateEmployee(Employee updateEmployeeRequest)
+
+        {
+            var choices = await _mcqDbContext.Choices.FindAsync(id);
+            //   var employee = await _fullStackDbContext.Employees.FindAsync(updateEmployeeRequest.Id);
+
+            if (choices == null)
+            {
+                return NotFound();
+            }
+
+            choices.Choice1 = updateChoicesRequest.Choice1;
+            choices.Choice2 = updateChoicesRequest.Choice2;
+            choices.Choice3 = updateChoicesRequest.Choice3;
+            choices.Choice4 = updateChoicesRequest.Choice4;
+          
+
+
+            await _mcqDbContext.SaveChangesAsync();
+            return Ok(choices);
+            // return Ok(await _fullStackDbContext.Employees.ToListAsync());
+
+        }
+
         [HttpDelete]
         [Route("{id:guid}")]
 

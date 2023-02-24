@@ -34,6 +34,11 @@ export class ChoicesService {
     return this.http.post<Choice[]>(this.baseApiUrl + '/api/Mcq/', addChoicesRequest); 
   }
 
+  updateChoices(id: string, updateChoicesRequest: Choice):
+  Observable<Choice> {
+   return this.http.put<Choice>(this.baseApiUrl + '/api/employees/' + id, updateChoicesRequest, httpOptions);
+ }
+
   deleteChoices(id: string): Observable<Choice> {
     return this.http.delete<Choice>(this.baseApiUrl + '/api/Mcq/' + id);
   }

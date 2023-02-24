@@ -26,7 +26,6 @@ export class ViewChoicesComponent implements OnInit {
     choice2: '',
     choice3: '',
     choice4: ''
-
   }
 
   value:number =50;

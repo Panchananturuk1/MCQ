@@ -1,0 +1,43 @@
+<div class="container my-5">
+    <h1 class="mb-3">Edit Employees</h1>
+
+    <div class="row">
+        <div class="col-6">
+            <form #form="ngForm" (ngSubmit)="updateEmployee()">
+                <div class="form-group">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" readonly
+                    name="id" [(ngModel)]="viewChoices.id">
+                  </div>  
+                <div class="form-group">
+                  <label for="choice1" class="form-label">choice1</label>
+                  <input type="text" class="form-control" id="choice1" 
+                  name="choice1" [(ngModel)]="viewChoices.choice1">
+                </div>  
+                <div class="form-group">
+                    <label for="choice2" class="form-label">choice2</label>
+                    <input type="text" class="form-control" id="choice2"
+                    name="choice2" [(ngModel)]="viewChoices.choice2">
+                  </div> 
+                  <div class="form-group">
+                    <label for="choice3" class="form-label">choice3</label>
+                    <input type="text" class="form-control" id="choice3"
+                    name="choice3" [(ngModel)]="viewChoices.choice3">
+                  </div>  
+                  <div class="form-group">
+                      <label for="choice4" class="form-label">choice4</label>
+                      <input type="text" class="form-control" id="salary"
+                      name="choice4" [(ngModel)]="viewChoices.choice4">
+                    </div> 
+                   
+
+                <button type="submit" class="btn btn-primary mr-5">Save</button>
+                <button type="button" class="btn btn-danger"
+                 (click)="deleteChoices(viewChoices.id)">Delete</button>
+
+        </form>
+        
+        </div>
+    </div>
+
+</div>

@@ -1,48 +1,65 @@
-<table class="table" *ngIf="choices && choices.length > 0">
-    <tr *ngFor="let choice of choices">
-<!-- <div *ngIf="choices && choices.length > 0">
-<div *ngFor="let choice of choices"> -->
-<!-- <div class="ractangle1"> -->
-    <div class="rectangle2"> 
-       <!-- <div class="card-body"> -->
-        <div class="col-md-7">
-            <p style="color: #0C747E; font-size: 18px;">Question Body</p>
-          </div>
-        <div class="choices">
-        
-        <div>
-            <div style="display: flex; align-items: flex-start;">
-          
-            <input type="radio" name="choice" id="choice-3">
-          <td>  <label for="choice" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice1 }}</label></td><br><br>
+
+  <div class="body">
+    <form action="" #form="ngForm">
+  <table *ngFor="let choice of choices">
+  <div class="rectangle-around">
+      <div class="card" >
+        <div class="card-header">
+          <p class="coice-interation" id="ModalLabel">CHOICE INTERACTION</p>
+          <span class="choice-right">
+            <p class="question">QUESTION</p>
+            <p class="response" routerLink="edit">
+              <a [routerLink]="['/choices', 'edit', choice.id]">Edit</a>
+            <!-- <img src="/assets/images/tdash.png" class="tdash" alt="" (click)="deleteChoices(viewChoices.id)"> -->
+            
+        </span>
         </div>
-    
-
-        <div>
-            <input type="radio" name="choice2" id="choice-2">
-            <td>  <label for="choice2" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice2 }}</label></td><br><br>
-        </div>
-
-        <div>
-            <input type="radio" name="choice3" id="choice-3">
-            <td>  <label for="choice3" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice3 }}</label></td><br><br>
-        </div>
-
-        
-        <div>
-            <input type="radio" name="choice4" id="choice-4">
-            <td>  <label for="choice4" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice4 }}</label></td><br><br>
-        </div>
-        
-      </div>
-      </div>
-  
-
-    <!-- </div> -->
-  <!-- </div> -->
-<!-- </div>
-</div> -->
-
-<!-- <div style="width: 400px; height: 300px; border: 2px solid black; padding: 20px;">
-    <div style="width: 200px; height: 100px; border: 2px solid red;"></div>
-  </div> -->
+        <div class="card-body">
+            <div class="col-md-7">
+              <p style="color: #0C747E; font-size: 18px;">Question Body</p>
+            </div>
+            <div class="choices">
+              
+              <div style="display: flex; align-items: flex-start;">
+                <tr>
+                <td>
+                <input type="radio" name="id" id="id">
+                <label for="id" style="padding-left: 28px;font-size: 15px; ">{{ choice.id }}
+                  <!-- <button type="button" class="btn btn-danger"
+                  (click)="deleteChoices(viewChoices.id)">Delete</button> -->
+                </label></td><br><br> 
+                <td>
+                <input type="radio" name="choice1" id="choice1">
+                <label for="choice1" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice1 }}
+                  <!-- <button type="button" class="btn btn-danger"
+                  (click)="deleteChoices(viewChoices.id)">Delete</button> -->
+                </label></td><br><br>
+                <td>
+                <input type="radio" name="choice2" id="choice2">
+                <label for="choice2" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice2 }}
+                  <!-- <button type="button" class="btn btn-danger"
+                  (click)="deleteChoices(viewChoices.id)">Delete</button> -->
+                </label></td><br><br>
+                <td>
+                <input type="radio" name="choice3" id="choice3">
+                <label for="choice3" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice3 }}
+                  <!-- <button type="button" class="btn btn-danger"
+                  (click)="deleteChoices(viewChoices.id)">Delete</button> -->
+                </label></td><br><br>
+                <td>
+                <input type="radio" name="choice4" id="choice4">
+                <label for="choice4" style="padding-left: 28px;font-size: 15px; ">{{ choice.choice4 }}
+                  <!-- <button type="button" class="btn btn-danger"
+                  (click)="deleteChoices(viewChoices.id)">Delete</button> -->
+                </label></td><br><br>
+                <td><a [routerLink]="['/choices', 'edit', choice.id]">View</a></td>
+              </tr>
+              </div>
+            </div>
+            </div>
+            </div>
+  </div>
+  </table>
+  </form>
+  </div>
+<!-- </div> -->
